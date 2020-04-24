@@ -1,0 +1,88 @@
+body {
+	font-family: "Google Sans", "Product Sans", "San Fransisco", "Segoe UI", "SF Pro Display", Roboto, Helvetica, Arial;
+}
+
+.cards::-webkit-scrollbar-track{
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0);
+    border-radius: 10px;
+    background-color: rgba(0,0,0,0);
+}
+.cards::-webkit-scrollbar{
+    width: 10px;
+    background-color: rgba(0,0,0,0);
+}
+.cards::-webkit-scrollbar-thumb{
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0);
+    background-color: #555;
+}
+
+.mainpage{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 98vh;
+}
+.greeting {
+	width: 50%;
+	text-align: center;
+	color: rgb(255, 255, 255); 
+	mix-blend-mode: difference;
+	font-weight: bold;
+	font-size: 8vw; 
+}
+
+.cards{
+	overflow: auto;
+	white-space: nowrap;
+	vertical-align: middle;
+	justify-content: center;
+	align-content: center;
+	align-items: center;
+	height: 100%;
+	width: 50%;
+}
+.cards::before {
+    content:'';
+    height: 100%;
+    display: inline-block;
+    vertical-align: middle;
+}
+.cards > div {
+	background-color: White;
+	color: rgb(0, 0, 0); 
+	mix-blend-mode: difference;
+	
+	display: inline-block;
+	vertical-align: middle;
+	width: 450px;
+	margin: 1%;
+	height: 450px;
+	
+	text-align: center;
+	font-size: 60px;
+	border-radius: 30px;
+}
+.cards > div::before{
+	content:'';
+    height: 50%;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+@media only screen and (max-width: 500px) {
+.mainpage{
+	display: initial;
+}
+.greeting{
+	width: 100%;
+	padding: 90px 0;
+	text-align: center;
+	font-size: 15vw;
+  }
+.cards{
+	height: 50vh;
+	width: 100%;
+}
+}
+

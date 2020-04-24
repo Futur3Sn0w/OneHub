@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#603cba">
+<meta name="theme-color" content="#ffffff">
+<link rel="stylesheet" type="text/css" href="css.css">
+
+<script>
+function startTime() {
+  var today = new Date();
+  var h = today.getHours();
+  var m = today.getMinutes();
+      var session = "AM";
+    
+    if(h == 0){
+        h = 12;
+    }
+    
+    if(h > 12){
+        h = h - 12;
+        session = "PM";
+    }
+  m = checkTime(m);
+  document.getElementById('timeLbl').innerHTML =
+  h + ":" + m + " " + session;
+  var t = setTimeout(startTime, 500);
+}
+function checkTime(i) {
+  if (i < 10) {i = "0" + i};
+  return i;
+}
+</script>
+
+<script>
+
+function setCookie(cname,cvalue,exdays) {
+  var d = new Date();
+  d.setTime(d.getTime() + (exdays*24*60*60*1000));
+  var expires = "expires=" + d.toGMTString();
+  document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+}
+
+function getCookie(cname) {
+  var name = cname + "=";
+  var decodedCookie = decodeURIComponent(document.cookie);
+  var ca = decodedCookie.split(';');
+  for(var i = 0; i < ca.length; i++) {
+    var c = ca[i];
+    while (c.charAt(0) == ' ') {
+      c = c.substring(1);
+    }
+    if (c.indexOf(name) == 0) {
+      return c.substring(name.length, c.length);
+    }
+  }
+  return "";
+}
+
+function checkCookie() {
+  var myDate = new Date();
+    var hrs = myDate.getHours();
+
+    var greet;
+
+    if (hrs < 12)
+        greet = 'Good Morning,';
+    else if (hrs >= 12 && hrs <= 17)
+        greet = 'Good Afternoon,';
+    else if (hrs >= 17 && hrs <= 24)
+        greet = 'Good Evening,';
+  var user=getCookie("username");
+  if (user != "") {
+    document.getElementById('lblGreetings').innerHTML =
+        '<b>' + greet + ' ' + user + '!</b>';
+  } else {
+     user = prompt("Please enter your name:","");
+     if (user != "" && user != null) {
+       setCookie("username", user, 30);
+	    document.getElementById('lblGreetings').innerHTML =
+        '<b>' + greet + ' ' + user + '!</b>';
+     }
+  }
+		}
+</script>
+
+<title>OneHub!</title>
+
+</head>
+
+<body onload="checkCookie(), startTime()">
+
+<div class="mainpage">
+<div class="greeting">
+<label id="lblGreetings"></label> <label id="lblName"></label>
+</div>
+<div class="cards">
+<div id="DateTimeCard">
+<label id="timeLbl"></label>
+<br>
+<label>Hey there</label>
+<br>
+<A HREF="javascript:history.go(0)">Refresh</A>
+</div>
+<div id="SlideshowCard">
+2
+</div>
+<div id="MediaCard">
+3
+</div>
+<div id="Card4">
+4
+</div>
+
+</div>
+</div>
+
+</body>
+
+<script type="text/javascript">
+var t = new Date().getHours();
+if (t < 10) {
+    document.body.style.backgroundColor="lightGrey";
+} else if (t < 20) {
+    document.body.style.backgroundColor="lightGrey";
+} else {
+    document.body.style.backgroundColor="darkSlateGrey";
+}
+</script>
+
+</html>
