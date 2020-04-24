@@ -99,10 +99,17 @@ function checkCookie() {
 
 <body onload="checkCookie(), startTime()">
 
-<ul class="sitenav">
-  <li style="font-weight:bold"><a href="">OneHub</a></li>
-  <li style="float:right"><a href=""><i class="fas fa-bars"></i></a></li>
-</ul>
+<div class="sitenav">
+  <a href="#home" style="font-weight:bold;">OneHub</a>
+  <div class="dropdown" style="float:right;">
+    <button class="dropbtn"><i class="fas fa-bars"></i>
+    </button>
+    <div class="dropdown-content">
+      <a href="#">Reset User Name</a>
+    </div>
+  </div> 
+  <a href="javascript:history.go(0)" style="float:right;"><i class="fas fa-redo-alt"></i></a>
+</div>
 
 <div class="mainpage">
 <div class="greeting">
@@ -111,10 +118,7 @@ function checkCookie() {
 <div class="cards">
 <div id="DateTimeCard">
 <b><label id="timeLbl"></label></b>
-<br>
-<label>Hey there</label>
-<br>
-<A HREF="javascript:history.go(0)">Refresh</A>
+<p id="dateLbl"></p>
 </div>
 <div id="QuoteCard">
 <label>This will be where you can view quotes!</label>
@@ -133,6 +137,15 @@ function checkCookie() {
 </div>
 
 </body>
+
+<script>
+var d = new Date();
+var days = ["Sunday, ","Monday, ","Tuesday, ","Wednesday, ","Thursday, ","Friday, ","Saturday, "];
+
+var months = ["January ", "February ", "March ", "April ", "May ", "June ", "July ", "August ", "September ", "October ", "November ", "December "];
+
+document.getElementById("dateLbl").innerHTML = days[d.getDay()] + "" + months[d.getMonth()] + d.getDate() + ", " + d.getFullYear();
+</script>
 
 <script>
 const slider = document.querySelector(".cards");
@@ -167,7 +180,7 @@ slider.addEventListener("mousemove", e => {
 var t = new Date().getHours();
 if (t < 10) {
     document.body.style.backgroundColor="lightGrey";
-} else if (t < 20) {
+} else if (t < 16) {
     document.body.style.backgroundColor="lightGrey";
 } else {
     document.body.style.backgroundColor="darkSlateGrey";
