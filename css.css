@@ -80,6 +80,7 @@ body {
 	text-align: center;
 	padding: 14px 16px;
 	text-decoration: none;
+	font-size: 20px;
 }
 .sitenav > li > a:hover {
   background-color: #111;
@@ -114,30 +115,47 @@ body {
 .cards::before {
     content:'';
     height: 100%;
+	width: 10px;
     display: inline-block;
     vertical-align: middle;
 }
 .cards > div {
 	background-color: White;
 	color: rgb(0, 0, 0); 
-	mix-blend-mode: difference;
 	
 	display: inline-block;
 	vertical-align: middle;
+	white-space: normal;
 	width: 450px;
 	margin: 1%;
 	height: 450px;
 	
 	text-align: center;
 	font-size: 60px;
-	border-radius: 30px;
-	box-shadow: 0 10px 10px -5px rgba(0,0,0,.4);
+	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+	border-radius: 15px;
+	-webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+	transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
-.cards > div::before{
+.cards > div::before {
 	content:'';
     height: 50%;
     display: inline-block;
     vertical-align: middle;
+}
+.cards > div::after {
+	box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+	opacity: 0;
+	-webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+	transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+.cards > div:hover::after {
+	opacity: 1;
+}
+.cards > div:hover {
+	-webkit-transform: scale(1.03, 1.03);
+	transform: scale(1.03, 1.03);
+	box-shadow: 0 5px 15px rgba(0,0,0,0.3);
 }
 
 @media only screen and (max-width: 500px) {
@@ -155,5 +173,10 @@ body {
 	width: 100%;
 }
 .cards > div{
-	box-shadow: 0 0 10px -6px rgba(0,0,0,.4);
+	width: 400px;
+	height: 400px;
+}
+.cards::before {
+	width: 12px;
+}
 }
