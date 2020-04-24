@@ -1,5 +1,54 @@
+@font-face {
+    font-family: 'google_sans_displayregular';
+    src: url('google_sans_display-400-100_0-0_0-webfont.woff2') format('woff2'),
+         url('google_sans_display-400-100_0-0_0-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'google_sans_displayitalic';
+    src: url('google_sans_display-400-100_0-1_0-webfont.woff2') format('woff2'),
+         url('google_sans_display-400-100_0-1_0-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'google_sans_displaymedium';
+    src: url('google_sans_display-500-100_0-0_0-webfont.woff2') format('woff2'),
+         url('google_sans_display-500-100_0-0_0-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'google_sans_displayMdIt';
+    src: url('google_sans_display-500-100_0-1_0-webfont.woff2') format('woff2'),
+         url('google_sans_display-500-100_0-1_0-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'google_sans_displaybold';
+    src: url('google_sans_display-700-100_0-0_0-webfont.woff2') format('woff2'),
+         url('google_sans_display-700-100_0-0_0-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'google_sans_displayBdIt';
+    src: url('google_sans_display-700-100_0-1_0-webfont.woff2') format('woff2'),
+         url('google_sans_display-700-100_0-1_0-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
 body {
-	font-family: "Google Sans", "Product Sans", "San Fransisco", "Segoe UI", "SF Pro Display", Roboto, Helvetica, Arial;
+	font-family: "Google Sans", "Product Sans", "San Fransisco", "Segoe UI", "SF Pro Display", Noto Sans, Roboto, Helvetica, Arial;
 }
 
 .cards::-webkit-scrollbar-track{
