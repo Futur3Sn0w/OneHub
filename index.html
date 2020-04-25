@@ -16,6 +16,29 @@
 </script>
 
 <script>
+function delC5() {
+	javascript:localStorage.setItem('c5','something')
+}
+function c5Check() {
+  if(localStorage.getItem('c5')) {
+    .Card5.style.display = 'none';
+    .dc2i5.style.display = 'block';
+	} 
+	else {
+    .Card5.style.display = 'inline-block';
+    .dc2i5.style.display = 'none';
+  }
+}
+</script>
+
+<script>
+function deleteUsername() {
+	  document.cookie = "username=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;"; 
+	  javascript:history.go(0);
+	  }
+</script>
+
+<script>
 function startTime() {
   var today = new Date();
   var h = today.getHours();
@@ -97,18 +120,33 @@ function checkCookie() {
 
 </head>
 
-<body onload="checkCookie(), startTime()">
+<body onload="checkCookie(); startTime(); c5Check()">
 
 <div class="sitenav">
   <a href="#home" style="font-weight:bold;">OneHub</a>
+  
   <div class="dropdown" style="float:right;">
     <button class="dropbtn"><i class="fas fa-bars"></i>
     </button>
     <div class="dropdown-content">
-      <a href="#">Reset User Name</a>
+      <a href="javascript:deleteUsername()">Reset User Name</a>
     </div>
   </div> 
+  
   <a href="javascript:history.go(0)" style="float:right;"><i class="fas fa-redo-alt"></i></a>
+  
+  <div class="dropdown2" style="float:right;">
+    <button class="dropbtn2"><i class="fas fa-plus"></i>
+	</button>
+    <div class="dropdown-content2">
+	  <a href="" class="dc2i2">Add 'Quote of the Day' Card</a>
+	  <a href="" class="dc2i3">Add Card3</a>
+	  <a href="" class="dc2i4">Add Card4</a>
+	  <a href="" class="dc2i5">Add Card5</a>
+    </div>
+  </div> 
+  
+  
 </div>
 
 <div class="mainpage">
@@ -116,31 +154,31 @@ function checkCookie() {
 <label id="lblGreetings"></label> <label id="lblName"></label>
 </div>
 <div class="cards">
-<div id="DateTimeCard">
+<div class="Card1">
 <br>
 <b><label id="timeLbl"></label></b>
 <br>
 <label id="dateLbl" style="font-size:30px; font-weight:500;"></label>
 </div>
-<div id="QuoteCard">
+<div class="Card2">
 <br>
 <label>This will be where you can view quotes!</label>
 <span class="close" style="font-size:30px;">&times;</span>
 </div>
-<div id="SlideshowCard">
-<br>
-2
-<span class="close" style="font-size:30px;">&times;</span>
-</div>
-<div id="MediaCard">
+<div class="Card3">
 <br>
 3
 <span class="close" style="font-size:30px;">&times;</span>
 </div>
-<div id="Card4">
+<div class="Card4">
 <br>
 4
 <span class="close" style="font-size:30px;">&times;</span>
+</div>
+<div class="Card5">
+<br>
+5
+<a href="javascript:delC5()" class="close" style="font-size:30px;">&times;</a>
 </div>
 
 <script>
