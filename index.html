@@ -117,21 +117,42 @@ function checkCookie() {
 </div>
 <div class="cards">
 <div id="DateTimeCard">
+<br>
 <b><label id="timeLbl"></label></b>
-<p id="dateLbl"></p>
+<br>
+<label id="dateLbl" style="font-size:30px; font-weight:500;"></label>
 </div>
 <div id="QuoteCard">
+<br>
 <label>This will be where you can view quotes!</label>
+<span class="close" style="font-size:30px;">&times;</span>
 </div>
 <div id="SlideshowCard">
+<br>
 2
+<span class="close" style="font-size:30px;">&times;</span>
 </div>
 <div id="MediaCard">
+<br>
 3
+<span class="close" style="font-size:30px;">&times;</span>
 </div>
 <div id="Card4">
+<br>
 4
+<span class="close" style="font-size:30px;">&times;</span>
 </div>
+
+<script>
+var closebtns = document.getElementsByClassName("close");
+var i;
+
+for (i = 0; i < closebtns.length; i++) {
+  closebtns[i].addEventListener("click", function() {
+    this.parentElement.style.display = 'none';
+  });
+}
+</script>
 
 </div>
 </div>
