@@ -125,7 +125,7 @@ function checkCookie() {
     <button class="dropbtn2"><i class="fas fa-plus"></i>
 	</button>
     <div class="dropdown-content2">
-	  <a href="javascript:addC2();" class="dc2i2">Add 'Quote of the Day' Card</a>
+	  <a href="javascript:addC2();" class="dc2i2">Add 'Inspiring Quotes' Card</a>
 	  <a href="javascript:addC3();" class="dc2i3">Add Card3</a>
 	  <a href="javascript:addC4();" class="dc2i4">Add Card4</a>
 	  <a href="javascript:addC5();" class="dc2i5">Add Card5</a>
@@ -141,30 +141,52 @@ function checkCookie() {
 </div>
 <div class="cards">
 <div class="Card1">
+<div class="cardActions">
+<span class="cardLbl"><i class="fas fa-info"></i> Quick Info</span>
+</div>
+<br>
 <br>
 <b><label id="timeLbl"></label></b>
 <br>
 <label id="dateLbl" style="font-size:30px; font-weight:500;"></label>
 </div>
 <div class="Card2">
+<div class="cardActions">
+<span class="cardLbl"><i class="fas fa-quote-right"></i> Inspiring Quotes</span>
+<a href="javascript:delC2()" class="close""><i class="fas fa-times"></i></a>
+</div>
 <br>
-<label>This will be where you can view quotes!</label>
-<a href="javascript:delC2()" class="close" style="font-size:30px;">&times;</a>
+<br>
+<a class="twitter-timeline" href="https://twitter.com/unlockmindset" data-tweet-limit="1">
+</a>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 </div>
 <div class="Card3">
+<div class="cardActions">
+<span class="cardLbl"><i class="fas fa-star-of-life"></i> Card3</span>
+<a href="javascript:delC2()" class="close""><i class="fas fa-times"></i></a>
+</div>
+<br>
 <br>
 3
-<a href="javascript:delC3()" class="close" style="font-size:30px;">&times;</a>
 </div>
 <div class="Card4">
+<div class="cardActions">
+<span class="cardLbl"><i class="fas fa-star-of-life"></i> Card4</span>
+<a href="javascript:delC2()" class="close""><i class="fas fa-times"></i></a>
+</div>
+<br>
 <br>
 4
-<a href="javascript:delC4()" class="close" style="font-size:30px;">&times;</a>
 </div>
 <div class="Card5">
+<div class="cardActions">
+<span class="cardLbl"><i class="fas fa-star-of-life"></i> Card5</span>
+<a href="javascript:delC2()" class="close""><i class="fas fa-times"></i></a>
+</div>
+<br>
 <br>
 5
-<a href="javascript:delC5()" class="close" style="font-size:30px;">&times;</a>
 </div>
 </div>
 </div>

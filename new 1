@@ -23,3 +23,8 @@ for (i = 0; i < closebtns.length; i++) {
 </script>
 
 <script src="index.js" defer></script>
+
+<div class="cardActions">
+<span class="cardLbl"><i class="fas fa-quote-right"></i> Inspiring Quotes</span>
+<a href="javascript:delC2()" class="close" style="font-size:30px;">&times;</a>
+</div>

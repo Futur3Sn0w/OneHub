@@ -82,7 +82,6 @@ body {
 }
 .dropdown, .dropdown2 {
   float: left;
-  overflow: hidden;
 }
 .dropdown .dropbtn, .dropdown2 .dropbtn2{
   font-size: 20px;  
@@ -104,7 +103,7 @@ body {
   background-color: #f9f9f9;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
+  z-index: 1000;
 }
 .dropdown-content a{
   float: none;
@@ -203,16 +202,67 @@ body {
 	box-shadow: 0 5px 15px rgba(0,0,0,0.3);
 }
 
-.close {
-	background-color: darkGrey;
-	border-radius: 10%;
-	cursor: pointer;
+.cardActions{
 	position: absolute;
-	bottom: 0;
+	bottom: 105%;
 	left: 50%;
-	padding: 1vh 1.5vw;
-	transform: translate(-50%, 50%);
-	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+	transform: translate(-50%, 0);
+	overflow: auto;
+	white-space: nowrap;
+	vertical-align: middle;
+	justify-content: center;
+	align-content: center;
+	align-items: center;
+	height: 55px;
+}
+.close {
+	text-decoration: none;
+	color: black;
+	width: 40px;
+}
+.cardLbl, .close{
+	background-color: white;
+	
+	font-size: 17px;
+	font-weight: 500;
+	height: 40px;
+	padding: 6px 6px;
+	
+	-webkit-border-radius: 30px;
+	-moz-border-radius: 30px;
+	border-radius: 30px;
+	border-style: solid;
+	border-width: 1px;
+	border-color: lightGrey;
+}
+.cardLbl:not(:first-child):not(:last-child), .close:not(:first-child):not(:last-child);{
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0;
+	border-radius: 0;
+}
+.cardLbl:first-child, .close:first-child;{
+	-webkit-border-top-right-radius: 0;
+	-webkit-border-bottom-right-radius: 0;
+	-moz-border-radius-topright: 0;
+	-moz-border-radius-bottomright: 0;
+	border-top-right-radius: 0;
+	border-bottom-right-radius: 0;
+}
+.cardLbl:last-child, .close:last-child;{
+	-webkit-border-top-left-radius: 0;
+	-webkit-border-bottom-left-radius: 0;
+	-moz-border-radius-topleft: 0;
+	-moz-border-radius-bottomleft: 0;
+	border-top-left-radius: 0;
+	border-bottom-left-radius: 0;
+}
+.cardLbl i, .close i{
+	font-size: 15px;
+	padding-right: 4px;
+	padding-left: 4px;
+}
+.cardLbl{
+	
 }
 
 @media only screen and (max-width: 500px) {
@@ -220,13 +270,14 @@ body {
 	display: initial;
 }
 .greeting{
+	height: 20vh;
 	width: 100%;
 	padding: 90px 0;
 	text-align: center;
 	font-size: 15vw;
   }
 .cards{
-	height: 50vh;
+	height: 58vh;
 	width: 100%;
 }
 .cards > div{
