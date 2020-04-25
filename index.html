@@ -16,22 +16,6 @@
 </script>
 
 <script>
-function delC5() {
-	javascript:localStorage.setItem('c5','something')
-}
-function c5Check() {
-  if(localStorage.getItem('c5')) {
-    .Card5.style.display = 'none';
-    .dc2i5.style.display = 'block';
-	} 
-	else {
-    .Card5.style.display = 'inline-block';
-    .dc2i5.style.display = 'none';
-  }
-}
-</script>
-
-<script>
 function deleteUsername() {
 	  document.cookie = "username=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;"; 
 	  javascript:history.go(0);
@@ -118,9 +102,11 @@ function checkCookie() {
 
 <title>OneHub!</title>
 
+<script src="index.js" defer></script>
+
 </head>
 
-<body onload="checkCookie(); startTime(); c5Check()">
+<body>
 
 <div class="sitenav">
   <a href="#home" style="font-weight:bold;">OneHub</a>
@@ -139,10 +125,10 @@ function checkCookie() {
     <button class="dropbtn2"><i class="fas fa-plus"></i>
 	</button>
     <div class="dropdown-content2">
-	  <a href="" class="dc2i2">Add 'Quote of the Day' Card</a>
-	  <a href="" class="dc2i3">Add Card3</a>
-	  <a href="" class="dc2i4">Add Card4</a>
-	  <a href="" class="dc2i5">Add Card5</a>
+	  <a href="javascript:addC2();" class="dc2i2">Add 'Quote of the Day' Card</a>
+	  <a href="javascript:addC3();" class="dc2i3">Add Card3</a>
+	  <a href="javascript:addC4();" class="dc2i4">Add Card4</a>
+	  <a href="javascript:addC5();" class="dc2i5">Add Card5</a>
     </div>
   </div> 
   
@@ -163,35 +149,23 @@ function checkCookie() {
 <div class="Card2">
 <br>
 <label>This will be where you can view quotes!</label>
-<span class="close" style="font-size:30px;">&times;</span>
+<a href="javascript:delC2()" class="close" style="font-size:30px;">&times;</a>
 </div>
 <div class="Card3">
 <br>
 3
-<span class="close" style="font-size:30px;">&times;</span>
+<a href="javascript:delC3()" class="close" style="font-size:30px;">&times;</a>
 </div>
 <div class="Card4">
 <br>
 4
-<span class="close" style="font-size:30px;">&times;</span>
+<a href="javascript:delC4()" class="close" style="font-size:30px;">&times;</a>
 </div>
 <div class="Card5">
 <br>
 5
 <a href="javascript:delC5()" class="close" style="font-size:30px;">&times;</a>
 </div>
-
-<script>
-var closebtns = document.getElementsByClassName("close");
-var i;
-
-for (i = 0; i < closebtns.length; i++) {
-  closebtns[i].addEventListener("click", function() {
-    this.parentElement.style.display = 'none';
-  });
-}
-</script>
-
 </div>
 </div>
 

@@ -1,0 +1,25 @@
+<script>
+function c5Check() {
+  if(localStorage.getItem('c5')) {
+    this.parentElement.style.display = 'none';
+    dc2i5.style.display = 'block';
+	
+  } else {
+    this.parentElement.style.display = 'inline-block';
+    dc2i5.style.display = 'none';
+  }
+}
+</script>
+
+<script>
+var closebtns = document.getElementsByClassName("close");
+var i;
+
+for (i = 0; i < closebtns.length; i++) {
+  closebtns[i].addEventListener("click", function() {
+    this.parentElement.style.display = 'none';
+  });
+}
+</script>
+
+<script src="index.js" defer></script>
