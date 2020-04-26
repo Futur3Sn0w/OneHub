@@ -43,6 +43,7 @@
 
 body {
 	font-family: google_sans, Arial;
+	overflow: hidden;
 }
 
 .cards::-webkit-scrollbar-track{
@@ -67,7 +68,7 @@ body {
 	padding: 0;
 	overflow: hidden;
 	background-color: #333;
-	position: fixed;
+	position: absolute;
 	left: 0;
 	top: 0;
 	width: 100%;
@@ -81,9 +82,11 @@ body {
   text-decoration: none;
 }
 .dropdown, .dropdown2 {
-  float: left;
+	float: left;
 }
 .dropdown .dropbtn, .dropdown2 .dropbtn2{
+	position: relative;
+	z-index: 20;
   font-size: 20px;  
   border: none;
   outline: none;
@@ -103,7 +106,6 @@ body {
   background-color: #f9f9f9;
   min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1000;
 }
 .dropdown-content a{
   float: none;
@@ -130,6 +132,9 @@ body {
   display: block;
 }
 
+.sitenavmobile{
+	display: none;
+}
 
 .mainpage {
 	display: flex;
@@ -207,7 +212,7 @@ body {
 	bottom: 105%;
 	left: 50%;
 	transform: translate(-50%, 0);
-	overflow: auto;
+	overflow: visible;
 	white-space: nowrap;
 	vertical-align: middle;
 	justify-content: center;
@@ -276,6 +281,12 @@ body {
 	text-align: center;
 	font-size: 15vw;
   }
+.sitenav{
+
+}
+.sitenavmobile{
+	
+}
 .cards{
 	height: 58vh;
 	width: 100%;
