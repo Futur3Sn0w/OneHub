@@ -87,14 +87,14 @@ body {
 .dropdown .dropbtn, .dropdown2 .dropbtn2{
 	position: relative;
 	z-index: 20;
-  font-size: 20px;  
-  border: none;
-  outline: none;
-  color: white;
-  padding: 14px 16px;
-  background-color: inherit;
-  font-family: inherit;
-  margin: 0;
+	font-size: 20px;  
+	border: none;
+	outline: none;
+	color: white;
+	padding: 14px 16px;
+	background-color: inherit;
+	font-family: inherit;
+	margin: 0;
 }
 .sitenav a:hover, .dropdown:hover .dropbtn, .dropdown2:hover .dropbtn2 {
   background-color: #111;
@@ -132,10 +132,6 @@ body {
   display: block;
 }
 
-.sitenavmobile{
-	display: none;
-}
-
 .mainpage {
 	display: flex;
 	justify-content: center;
@@ -152,7 +148,8 @@ body {
 }
 
 .cards{
-	overflow: auto;
+	overflow-y: hidden;
+	overflow-x: auto;
 	white-space: nowrap;
 	vertical-align: middle;
 	justify-content: center;
@@ -180,9 +177,9 @@ body {
 	align-content: center;
 	align-items: center;
 	white-space: normal;
-	width: 450px;
+	width: 380px;
 	margin: 1%;
-	height: 450px;
+	height: 380px;
 	
 	text-align: center;
 	font-size: 55px;
@@ -207,9 +204,17 @@ body {
 	box-shadow: 0 5px 15px rgba(0,0,0,0.3);
 }
 
+.sep1{
+	content:'';
+    height: 25%;
+	width: 0;
+    display: inline-block;
+    vertical-align: middle;
+}
+
 .cardActions{
 	position: absolute;
-	bottom: 105%;
+	bottom: -15%;
 	left: 50%;
 	transform: translate(-50%, 0);
 	overflow: visible;
@@ -231,7 +236,7 @@ body {
 	font-size: 17px;
 	font-weight: 500;
 	height: 40px;
-	padding: 6px 6px;
+	padding: 8px 10px;
 	
 	-webkit-border-radius: 30px;
 	-moz-border-radius: 30px;
@@ -266,9 +271,6 @@ body {
 	padding-right: 4px;
 	padding-left: 4px;
 }
-.cardLbl{
-	
-}
 
 .if1{
 	display: block;
@@ -279,7 +281,7 @@ body {
 	border: none;
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 600px) {
 .mainpage{
 	display: initial;
 }
@@ -290,13 +292,16 @@ body {
 	text-align: center;
 	font-size: 15vw;
   }
+.cardActions{
+	bottom: 103%;
+}
 .cards{
 	height: 58vh;
 	width: 100%;
 }
 .cards > div{
-	width: 400px;
-	height: 400px;
+	width: 300px;
+	height: 300px;
 }
 .cards::before {
 	width: 12px;

@@ -9,42 +9,42 @@ const d5 = document.querySelector('.dc2i5');
 
 function addC2() {
 	localStorage.removeItem('c2');
-	history.go(0);
+	cardCheck2();
 };
 
 function delC2() {
 	localStorage.setItem('c2','something')
-	history.go(0);
+	cardCheck2();
 };
 
 function addC3() {
 	localStorage.removeItem('c3');
-	history.go(0);
+	cardCheck3();
 };
 
 function delC3() {
 	localStorage.setItem('c3','something')
-	history.go(0);
+	cardCheck3();
 };
 
 function addC4() {
 	localStorage.removeItem('c4');
-	history.go(0);
+	cardCheck4();
 };
 
 function delC4() {
 	localStorage.setItem('c4','something')
-	history.go(0);
+	cardCheck4();
 };
 
 function addC5() {
 	localStorage.removeItem('c5');
-	history.go(0);
+	cardCheck5();
 };
 
 function delC5() {
 	localStorage.setItem('c5','something')
-	history.go(0);
+	cardCheck5();
 };
 
 function cardCheck2() {
