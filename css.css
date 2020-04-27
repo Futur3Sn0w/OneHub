@@ -73,13 +73,14 @@ body {
 	top: 0;
 	width: 100%;
 }
-.sitenav a {
+.sitenav a, .sitenav label {
   float: left;
   font-size: 20px;
   color: white;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
+  font-weight: 500;
 }
 .dropdown, .dropdown2 {
 	float: left;
@@ -96,7 +97,7 @@ body {
 	font-family: inherit;
 	margin: 0;
 }
-.sitenav a:hover, .dropdown:hover .dropbtn, .dropdown2:hover .dropbtn2 {
+.sitenav a:hover, .sitenav label:hover, .dropdown:hover .dropbtn, .dropdown2:hover .dropbtn2 {
   background-color: #111;
 }
 .dropdown-content, .dropdown-content2{
