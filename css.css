@@ -63,15 +63,16 @@ body {
 
 
 .sitenav {
-    list-style-type: none;
+	list-style-type: none;
 	margin: 0;
 	padding: 0;
-	overflow: hidden;
+	overflow: auto;
 	background-color: #333;
 	position: absolute;
 	left: 0;
 	top: 0;
 	width: 100%;
+	z-index: 20; /*dont remove this!*/
 }
 .sitenav a, .sitenav label {
   float: left;
@@ -330,12 +331,19 @@ p.rss-title {
 	border: none;
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 750px) {
+.cards > div{
+	width: 250px;
+	height: 250px;
+}
+}
+
+@media only screen and (max-width: 900px) {
 .mainpage{
 	display: initial;
 }
 .greeting{
-	height: 20vh;
+	height: 15vh;
 	width: 100%;
 	padding: 90px 0;
 	text-align: center;
@@ -345,12 +353,12 @@ p.rss-title {
 	bottom: 103%;
 }
 .cards{
-	height: 58vh;
+	height: 60vh;
 	width: 100%;
 }
 .cards > div{
-	width: 300px;
-	height: 300px;
+	width: 320px;
+	height: 330px;
 }
 .cards::before {
 	width: 12px;
