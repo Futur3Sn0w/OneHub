@@ -357,8 +357,8 @@ p.rss-title {
 	width: 100%;
 }
 .cards > div{
-	width: 320px;
-	height: 330px;
+	width: 300px;
+	height: 300px;
 }
 .cards::before {
 	width: 12px;
