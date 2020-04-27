@@ -89,12 +89,16 @@ function checkCookie() {
   if (user != "") {
     document.getElementById('lblGreetings').innerHTML =
         '<b>' + greet + ' ' + user + '!</b>';
+		document.getElementById('homeLbl').innerHTML =
+        user + "&#39;" + 's OneHub';
   } else {
      user = prompt("Please enter your name:","");
      if (user != "" && user != null) {
        setCookie("username", user, 30);
 	    document.getElementById('lblGreetings').innerHTML =
         '<b>' + greet + ' ' + user + '!</b>';
+		document.getElementById('homeLbl').innerHTML =
+        user + "&#39;" + 's OneHub';
      }
   }
 		}
@@ -109,7 +113,7 @@ function checkCookie() {
 <body>
 
 <div class="sitenav">
-  <a href="#home" style="font-weight:bold;">OneHub</a>
+  <a href="#home" style="font-weight:bold;"><label id="homeLbl"></label></a>
   
   <div class="dropdown" style="float:right;">
     <button class="dropbtn"><i class="fas fa-bars"></i>
