@@ -91,4 +91,4 @@ function cardCheck5() {
   }
 }
 
-document.body.onload = cardCheck2(); cardCheck3(); cardCheck4(); cardCheck5(); checkCookie(); startTime();
+document.body.onload = cardCheck2(); cardCheck3(); cardCheck5(); checkCookie(); startTime();

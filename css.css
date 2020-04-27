@@ -204,6 +204,55 @@ body {
 	box-shadow: 0 5px 15px rgba(0,0,0,0.3);
 }
 
+.rss-box {
+	display: inline-block;
+	margin: 0.5em;
+	width: 100%;
+	background-color: #FFFFFF;
+	border: 7px solid #FF9900;
+	 
+}
+.rss-items {
+	margin-top:0px;
+	padding:0.5em; 0.5em;
+	margin-left:0px;
+	color: #000000;
+}
+p.rss-title {
+	padding:0.5em;
+	}
+.rss-title {
+	text-decoration: none;
+	font-size: 19px;
+	background-color:#FF9900;
+	color:black;
+	font-weight:bold;
+	margin: 0px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	text-align: left;
+}
+.rss-item  {
+	font-size: 14px;
+	font-weight : normal;
+	list-style:none;
+	padding-bottom:1em;
+}
+.rss-item a {
+	text-decoration : none;
+	color: #3300FF;
+	font-size: 16px;
+	font-weight:light;
+	}	
+.rss-item a:visited {
+	color: #330066;
+}
+.rss-date {
+	font-size: 85%;
+	font-weight : normal;
+	color: #aaa;
+	} 
+
 .sep1{
 	content:'';
     height: 25%;
